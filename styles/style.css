@@ -1,0 +1,14 @@
+.article {
+    background-repeat: no-repeat;
+    background-image: url("../img/background-blog.jpg");
+}
+
+.delivery {
+    background-repeat: no-repeat;
+    background-image: url("../img/background-delivery.jpg");
+}
+
+.location{
+    background-repeat: no-repeat;
+    background-image: url("../img/background-location.jpg");
+}
