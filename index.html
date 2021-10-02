@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="styles/style.css">
   </head>
   <body>
+ 
     <header class="page-header">
       <nav class="navigation">
         <a class="logo" href="#">
@@ -51,7 +52,7 @@
           <li class="promo-item">
             <div>
               <h2 class="promo">Нежный пломбир с клубничным джемом</h2>
-              <p class="text">Натуральное мороженое из свежих сливок
+              <p class="promo-text">Натуральное мороженое из свежих сливок
               и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи.</p>
               <a class="button button-order" href="#">Заказать</a>
             </div>
@@ -68,7 +69,7 @@
           <li class="promo-item">
             <div>
               <h2 class="promo">Сливочное мороженое со вкусом банана</h2>
-              <p class="text">Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение даже в самый жаркий летний день.</p>
+              <p class="promo-text">Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение даже в самый жаркий летний день.</p>
               <a class="button button-order" href="#">Заказать</a>
             </div>
             <div>
@@ -84,7 +85,7 @@
           <li class="promo-item">
             <div>
               <h2 class="promo">Карамельный пломбир с маршмеллоу</h2>
-              <p class="text">Необычный сладкий дессерт с карамельный топпингом и кусочками зефира завоюет сердца сладкоежек всех возрастов.</p>
+              <p class="promo-text">Необычный сладкий дессерт с карамельный топпингом и кусочками зефира завоюет сердца сладкоежек всех возрастов.</p>
               <a class="button button-order" href="#">Заказать</a>
             </div>
             <div>
@@ -114,36 +115,36 @@
               <span class="visually-hidden">3 слайд</span>
             </button>
         </ul>
-        <ul class="promo-social-list">
+        <ul class="social-list promo-social-list">
           <li class="promo-social-item">
-            <a class="button" href="https://vk.com/htmlacademy">
+            <a class="button-social" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">ВКонтакте</span>
             </a>
           </li>
           <li class="promo-social-item">
-            <a class="button" href="https://www.facebook.com/htmlacademy">
+            <a class="button-social" href="https://www.facebook.com/htmlacademy">
               <span class="visually-hidden">Фэйсбук</span>
             </a>
           </li>
           <li class="promo-social-item">
-            <a class="button" href="https://www.instagram.com/htmlacademy/">
+            <a class="button-social" href="https://www.instagram.com/htmlacademy/">
               <span class="visually-hidden">Инстаграм</span>
             </a>
           </li>
         </ul>
       </section>
-    
+
       <section class="presents">
         <h2 class="visually-hidden">Подарки при заказе мороженого</h2>
         <h3 class="title">Заказывайте мороженное и получайте подарки</h3>
         <div class="offers">
-          <h3>Малинка даром!</h3>
+          <h3 class="offers-tittle">Малинка даром!</h3>
           <p class="text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
           <a class="button button-presents" href="#">Хочу подарок</a>
           <img class="offers-ice" src="img/gifts-raspberries.png" width="181" height="284" alt="Рожок с малиной">
         </div>
         <div class="offers">
-          <h3>Маршмеллоу даром!</h3>
+          <h3 class="offers-tittle">Маршмеллоу даром!</h3>
           <p class="text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку нежных зефирок совершенно бесплатно.</p>
           <a class="button button-presents" href="#">Хочу подарок</a>
           <img class="offers-ice" src="img/gifts-marshmallow.png" width="232" height="359" alt="Рожок с зефирками">
@@ -228,7 +229,7 @@
         <article class="article">
           <span class="visually-hidden">Посты в блоге</span>
           <p class="text">Новое в нашем блоге</p>
-          <a class="" href="#">
+          <a class="post-link" href="#">
             <h3 class="new-post">10 способов сервировки фруктовых щербетов к столу</h3>
           </a>
         </article>
@@ -245,7 +246,7 @@
           </form>
         </div>
       </section>
-      
+
       <section class="delivery">
         <div class="description">
           <h2 class="delivery-ice">Доставка любимого мороженого на дом</h2>
@@ -291,13 +292,13 @@
 
       <section class="location">
         <h2 class="visually-hidden">Адрес главного офиса и офлайн-магазина Glaccy-shop</h2>
-        <p class="text">
+        <p class="location-text">
           Адрес главного офиса и офлайн-магазина:
-          <b>наб. Реки Карповки, 5 лит П, Санкт-Петербург</b>
+          <span class="location-text-bold">наб. Реки Карповки, 5 лит П, Санкт-Петербург</span>
         </p>
-        <p class="text">Для заказов по телефону:</p>
+        <p class="location-text">Для заказов по телефону:</p>
         <h3>
-          <b>+7 (812) 812-12-12</b>
+          <span class="location-text-bold">+7 (812) 812-12-12</span>
         </h3>
         <p class="text">(с 10 до 20 ежедневно)</p>
         <button class="button button-send" type="submit">Форма обратной связи</button>
@@ -307,44 +308,36 @@
     <footer class="page-footer">
       <div class="footer-social">
         <h2 class="visually-hidden">Социальные сети</h2>
-        <ul class="footer-social-list">
+        <ul class="social-list footer-social-list">
           <li class="footer-social-item">
-            <a class="button" href="https://vk.com/htmlacademy">
+            <a class="button-social" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">ВКонтакте</span>
             </a>
           </li>
           <li class="footer-social-item">
-            <a class="button" href="https://www.facebook.com/htmlacademy">
+            <a class="button-social" href="https://www.facebook.com/htmlacademy">
               <span class="visually-hidden">Фэйсбук</span>
             </a>
           </li>
           <li class="footer-social-item">
-            <a class="button" href="https://www.instagram.com/htmlacademy/">
+            <a class="button-social" href="https://www.instagram.com/htmlacademy/">
               <span class="visually-hidden">Инстаграм</span>
             </a>
           </li>
         </ul>
       </div>
-
       <div class="additionally">
         <h2 class="visually-hidden">Дополнительная информация</h2>
         <ul class="additionally-info-list">
-          <li class="additionally-info-item"><a>Для поставщиков</a></li>
+          <li class="additionally-info-item like"><a>Для поставщиков</a></li>
           <li class="additionally-info-item"><a>О производстве</a></li>
           <li class="additionally-info-item"><a>Наши документы</a></li>
           <li class="additionally-info-item"><a>Экологические стандарты</a></li>
         </ul>
       </div>
-
       <div class="copyright">
-        <ul class="copyright-list">
-          <li class="copyright-item">
-            <img class="logo-htmlacademy" src="#" alt="Логотип HTML академии">
-          </li>
-          <li class="copyright-item">
-            <p class="about-text">Сделано в <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a> © 2021</p>
-          </li>
-        </ul>
+        <img class="logo-htmlacademy" src="img/logo-htmlacademy.svg" alt="Логотип HTML академии">
+        <p class="about-text">Сделано в <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a> © 2021</p>
       </div>
     </footer>
   </body>
