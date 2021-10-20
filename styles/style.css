@@ -76,6 +76,7 @@ body {
     line-height: 46px;
     text-align: center;
     color: #2D3440;
+    margin-top: 0;
 }
 
 .text {
@@ -166,8 +167,8 @@ body {
 }
 
 .promo-item {
+    display: flex;
     width: 1170px;
-    height: 554px;
 }
 
 .promo {
@@ -180,12 +181,26 @@ body {
 }
 
 .promo-list {
+    display: flex;
+    align-items: center;
     list-style: none;
     padding: 0;
 }
 
-.promo-item {
-    margin-bottom: 100px;
+.promo-item-active .promo-description,
+.promo-item-active .button-slide {
+    display: block;
+}
+
+.promo-item-active  .ice-cream {
+    width: 306px;
+    height: 507px;
+}
+
+.promo-description {
+    width: 470px;
+    padding: 136px 70px;
+    display: none;
 }
 
 .promo-text {
@@ -199,6 +214,29 @@ body {
     padding-left: 0;
     list-style: none;
 }
+
+.promo-image {
+    display: flex;
+    align-items: center;
+}
+
+.button-slide {
+    height: 38px;
+    width: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(252, 252, 252, 0.3);
+    border: 2px solid #FCFCFC;
+    box-sizing: border-box;
+    border-radius: 50%; 
+    display: none;   
+ }
+
+.button-right {
+    transform: scale(-1,1);
+}
+
 
 .promo-item-footer {
     display: flex;
@@ -257,14 +295,12 @@ body {
 .variation-item {
     background-color: #FCFCFC;
     border-radius: 8px;
-    margin: 0 30px 60px 0;
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
     text-align: center;
     color: #2D3440;
     width: 270px;
-    height: 281px;
     justify-content: space-between;
 }
 
@@ -273,7 +309,9 @@ body {
 }
 
 .variation-list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 270px);
+    gap: 91px 30px;
     padding: 0;
     list-style: none;
     padding-right: 0;
@@ -284,16 +322,49 @@ h4 {
     margin: 0;
 }
 
+.button-variation {
+    width: 32px;
+    height: 32px;
+    background-color: #FF2F64;
+    border-radius: 26px;
+    border: none;
+}
+
 /* advantages */
 
 .advantages {
+    width: 1170px;
+    padding: 24px;
+    box-sizing: border-box;
     margin-bottom: 80px;
-    background-color: #FCFCFC;
+    background-image: url("../img/background-wafle.jpg");
     border-radius: 16px;
 }
 
+.advantages-wrap {
+    background-color: #FCFCFC;
+    width: 1122px;
+}
+
 .advantages-list {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    margin: 0 40px;
+    padding: 0;
     list-style: none;
+}
+
+.advantages-item {
+    display: flex;
+}
+
+.advantages-text {
+    width: 442px;
+}
+
+.advantages-img {
+    margin-right: 16px;
 }
 
 
@@ -305,11 +376,12 @@ h4 {
 
 .blog-sections {
     display: flex;
+    justify-content: space-between;
 }
 
 .article {
     border-radius: 16px;
-    margin-right: 30px;
+    width: 570px;
     background-repeat: no-repeat;
     background-image: url("../img/background-blog.jpg");
 }
@@ -353,6 +425,52 @@ h4 {
     display: flex;
 }
 
+.communication {
+    width: 500px;
+    padding: 40px;
+    margin: 64px;
+    background: #FCFCFC;
+    border-radius: 8px;
+}
+
+.delivery-form {
+    display: grid;
+    grid-template-columns: 117px 287px;
+    gap: 16px;
+}
+
+.communication-form-date,
+.communication-form-tel,
+.communication-form-address {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.communication-form-address {
+    grid-column: 1 / -1;
+}
+
+.field {
+    padding: 14px 16px;
+    color: #B9B9B9;
+    border: 1px solid #B9B9B9;
+    border-radius: 4px;
+    
+}
+
+.tel-field {
+    width: 287px;
+}
+
+.address-field {
+    width: 420px;
+}
+
+.form-text {
+    color: #2D3440;
+}
+
 .description {
     margin: 80px 60px 100px 100px;
     width: 500px;
@@ -365,13 +483,11 @@ h4 {
     line-height: 46px;
 }
 
-.communication {
-    width: 500px;
-    height: 406px;
-    margin: 64px;
-    background: #FCFCFC;
-    border-radius: 8px;
+.button-send {
+    grid-column: 1 / -1;
+    justify-self: center;
 }
+
 
 /* location */
 
@@ -511,6 +627,7 @@ h4 {
 .sorting-type {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 99px;
 }
 
 .select-control {
@@ -518,6 +635,7 @@ h4 {
     background-color: #FCFCFC;
     opacity: 0.3;
     border-radius: 20px;
+    padding: 8px 16px;
 }
 
 .catalog-filter-list {
@@ -525,6 +643,7 @@ h4 {
     list-style: none;
     background-color: rgba(252, 252, 252, 0.3);
     border-radius: 20px;
+    padding: 8px 16px;
 }
 
 .catalog-filter-item {
@@ -534,30 +653,35 @@ h4 {
 .catalog-filter-group {
     border: none;
     margin-right: 20px;
-    height: 70px;
     padding: 0;
 }
 
+.catalog-filter-button {
+    align-self: center;
+}
 
 
-/* catalog */
 .button-filters {
     font-weight: 700;
     width: 187px;
-    height: 36px;
     background-color: rgba(252, 252, 252, 0.3);
     border: 2px solid #FCFCFC;
     border-radius: 20px;
 }
+
+
+/* catalog */
 
 .product-card {
     border-bottom: 1px solid rgba(252, 252, 252, 0.3);
 }
 
 .product-card-list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 270px);
+    gap: 91px 30px;
     margin: 0;
+    margin-bottom: 16px;
     padding: 0;
     list-style: none;
 }
@@ -579,6 +703,7 @@ h4 {
 .pagination-wrap {
     display: flex;
     justify-content: space-between;
+    padding: 41px;
     padding-left: 494px;
 }
 
