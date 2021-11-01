@@ -99,6 +99,10 @@ body {
     margin-top: 0;
 }
 
+.title-center {
+    margin-bottom: 56px;
+}
+
 .text {
     font-weight: normal;
     font-size: 16px;
@@ -148,12 +152,12 @@ body {
     display: block;
     color: #2D3440;
     text-decoration: none;
-    padding: 8px 16px;
+    padding: 6px 17px;
     border-radius: 26px;
 }
 
 .navigation-user .navigation-link {
-    padding: 6px;
+    display: flex;
     margin-left: 18px;
     background-color: rgba(252, 252, 252, 0.3);
     border-radius: 26px;
@@ -171,6 +175,11 @@ body {
 .navigation-link:active {
     background: #FCFCFC;
     border: none;
+}
+
+
+.navigation-svg {
+    padding-right: 8px;
 }
 
 .main-logo {
@@ -214,8 +223,6 @@ body {
     color: #2D3440;
     margin-top: 0;
     margin-bottom: 24px;
-px
-;
 }
 
 .promo-list {
@@ -239,6 +246,8 @@ px
 .promo-item-active .promo-image::before {
     width: 312px;
     height: 312px;
+    left: calc(50% - 312px/2 + 3px);
+    top: calc(50% - 312px/2);
 }
 
 
@@ -269,8 +278,8 @@ px
 
 .slider-pagination-button {
     width: 12px;
-    height: 12px;
-    border: none;
+    height: 13px;
+    border: 1px solid transparent;
     border-radius: 50%;
     background-color: white;
     opacity: .3;
@@ -350,13 +359,16 @@ px
 
 .social-list {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
     list-style: none;
     min-height: 24px;
+    width: 430px;
 }
 
 .promo-social-list {
+    display: flex;
+    justify-content: flex-end;
     margin: 0;
     margin-left: auto;
 }
@@ -436,6 +448,22 @@ px
     margin-bottom: 80px;
 }
 
+.variation-list {
+    display: grid;
+    grid-template-columns: repeat(4, 270px);
+    gap: 91px 30px;
+    padding: 0;
+    list-style: none;
+    padding-right: 0;
+    margin-top: 107px;
+}
+
+h4 {
+    padding: 0;
+    padding-bottom: 8px;
+    margin: 0;
+}
+
 .variation-item {
     background-color: #FCFCFC;
     border-radius: 8px;
@@ -446,24 +474,26 @@ px
     color: #2D3440;
     width: 270px;
     justify-content: space-between;
+    padding: 28px 40px;
+    padding-top: 0;
+    box-sizing: border-box;
+}
+
+.variation-img {
+    margin-top: -51px;
+}
+
+.variation-card-text {
+    margin-bottom: 20px;
 }
 
 .variation-item:nth-child(4n) {
     margin-right: 0;
 }
 
-.variation-list {
-    display: grid;
-    grid-template-columns: repeat(4, 270px);
-    gap: 91px 30px;
-    padding: 0;
-    list-style: none;
-    padding-right: 0;
-}
-
-h4 {
-    padding: 0;
-    margin: 0;
+.price-ice-cream {
+    display: flex;
+    justify-content: space-between;
 }
 
 .button-variation {
@@ -508,7 +538,9 @@ h4 {
 
 .advantages-wrap {
     background-color: #FCFCFC;
+    border-radius: 16px;
     width: 1122px;
+    padding-top: 56px;
 }
 
 .advantages-list {
@@ -576,6 +608,7 @@ h4 {
 
 .subscription {
     background: #FCFCFC;
+    border-radius: 16px;
     padding: 26px;
 }
 
@@ -642,6 +675,7 @@ h4 {
 .delivery {
     background-repeat: no-repeat;
     background-image: url("../img/background-delivery.jpg");
+    border-radius: 16px;
     width: 1170px;
     height: 534px;
     margin-bottom: 80px;
@@ -680,6 +714,25 @@ h4 {
     grid-column: 1 / -1;
 }
 
+.form-label-icon {
+    position: relative;
+    padding-right: 16px;
+}
+  
+.info {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    margin-top: 4px;
+    margin-left: 2px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    background-image: url("../img/info.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .field {
     padding: 14px 16px;
     color: #B9B9B9;
@@ -690,16 +743,42 @@ h4 {
 
 .field:hover {
     cursor: pointer;
+    border-color: #2D3440;
+}
+
+.field:hover,
+.field:focus {
+  border-color: #2D3440;
 }
 
 .field:focus {
     border: 2px solid #2D3440;
     border-radius: 4px;
+    color: #2D3440;
+}
+
+.field:disabled,
+.field:disabled:hover {
+  color: #2D3440;
+  background: #E7E7E7;
+  border-color: #B9B9B9;
+}
+
+.field:invalid {
+  border: 1px solid #EA5454;
+}
+
+.field:focus:invalid {
+  border: 2px solid #EA5454;
+}
+
+.field::placeholder {
+  color: #B9B9B9;
 }
 
 .date-field {
     width: 117px;
-    padding: 14px 0;
+    box-sizing: border-box;
 }
 
 .tel-field {
@@ -801,7 +880,6 @@ h3 {
 }
 
 .footer-social-list {
-    width: 380px;
     padding: 0;
     margin-right: auto;
 }
@@ -810,9 +888,17 @@ h3 {
     margin: 5px;
 }
 
+.additionally {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
 .additionally-info-list {
     display: flex;
     flex-wrap: wrap;
+    padding: 0;
+    flex-direction: column;
     column-gap: 25px;
     row-gap: 8px;
     max-width: 360px;
@@ -855,6 +941,10 @@ h3 {
     background-color: #FF4A78;
     border-radius: 26px;
     padding: 8px 16px;
+}
+
+.navigation-link-active:hover {
+    color: #2D3440;
 }
 
 .inner-header {
@@ -900,10 +990,21 @@ h3 {
 
 .select-control {
     width: 196px;
-    background-color: #FCFCFC;
-    opacity: 0.3;
+    background-color: rgb(99%, 99%, 99%, 0.3);
     border-radius: 20px;
     padding: 8px 16px;
+    margin-top: 8px;
+    border: none;
+}
+
+.select-control:hover {
+    cursor: pointer;
+    background-color: rgb(99%, 99%, 99%, 0.5);
+}
+
+.select-control:focus {
+    background-color: rgb(99%, 99%, 99%, 0.4);
+    outline: 3px solid #FCFCFC;
 }
 
 .catalog-filter-list {
@@ -931,11 +1032,27 @@ h3 {
 
 .button-filters {
     font-weight: 700;
-    width: 187px;
+    padding: 8px 53px;
     background-color: rgba(252, 252, 252, 0.3);
     border: 2px solid #FCFCFC;
-    border-radius: 20px;
+    border-radius: 26px;
 }
+
+.button-filters:hover {
+    background: #FCFCFC;
+    border: 2px solid rgb(100%, 69%, 76%, 0.3);
+}
+
+.button-filters:focus {
+    border: 2px solid #2D3440;
+}
+
+.button-filters:disabled {
+    background: rgba(252, 252, 252, 0.3);
+    opacity: 0.4;
+    border: 2px solid #FCFCFC;
+}
+
 
 
 /* catalog */
@@ -973,15 +1090,32 @@ h3 {
     justify-content: space-between;
     padding: 41px;
     padding-left: 494px;
+    padding-right: 0;
 }
 
 .pagination element {
     display: flex;
 }
 
+.pagination-item {
+    margin-left: 8px;
+}
+
 .pagination-link {
     text-decoration: none;
     color: #2D3440;
+    padding: 2px 8px;
+    border-radius: 50%;
+}
+
+.pagination-link:hover {
+    background: rgba(252, 252, 252, 0.3);
+    border: 1px solid #FCFCFC;
+}
+
+.pagination-link:focus {
+    background: rgba(252, 252, 252, 0.3);
+    border: 1px solid #2D3440;
 }
 
 .pagination-current {
@@ -989,6 +1123,12 @@ h3 {
     border-radius: 50%;
     padding: 2px 8px;
 }
+
+.reverse {
+    transform: scale(-1,1);
+}
+
+
 
 
 
