@@ -9,12 +9,32 @@
  
     <header class="page-header">
       <nav class="navigation">
-        <a class="logo" href="#">
+        <a class="logo" href="https://htmlacademy.ru/">
           <img class="main-logo" src="img/logo.png" width="137" height="56" alt="Логотип Gllacy-shop">
         </a>
         <ul class="navigation-list">
           <li class="navigation-item">
             <a class="navigation-link" href="catalog.html">Каталог</a>
+
+            <div class="popover popover-catalog">
+              <h2 class="popover-title-catalog">
+                <a class="popover-title-new" href="#">Новинки</a>
+              </h2>
+              <ul class="catalog-menu-list">
+                <li class="menu-item">
+                  <a href="#">Сливочное</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">Щербеты</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">Фруктовый лед</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#">Мелорин</a>
+                </li>
+              </ul>
+            </div>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">Доставка и оплата</a>
@@ -34,6 +54,11 @@
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M1.91286 7.24625C1.91286 4.30073 4.30068 1.91292 7.2462 1.91292C10.1917 1.91292 12.5795 4.30073 12.5795 7.24625C12.5795 8.68547 12.0095 9.99154 11.0828 10.951C11.0582 10.9695 11.0346 10.99 11.0123 11.0124C10.9899 11.0347 10.9694 11.0583 10.9509 11.0829C9.99146 12.0095 8.6854 12.5796 7.2462 12.5796C4.30068 12.5796 1.91286 10.1918 1.91286 7.24625ZM11.4653 12.4082C10.3161 13.3487 8.84703 13.9129 7.2462 13.9129C3.5643 13.9129 0.579529 10.9281 0.579529 7.24625C0.579529 3.56435 3.5643 0.579582 7.2462 0.579582C10.9281 0.579582 13.9129 3.56435 13.9129 7.24625C13.9129 8.84711 13.3486 10.3162 12.4081 11.4654L15.2176 14.2749C15.4779 14.5352 15.4779 14.9573 15.2176 15.2177C14.9572 15.478 14.5351 15.478 14.2748 15.2177L11.4653 12.4082Z" fill="#2D3440"/>
               </svg>
             </a>
+            <div class="popover popover-search">
+              <div class="popover-content">
+                <input class="field searc-field" placeholder="Поиск по сайту" type="text" name="search-text" >
+              </div>
+            </div>
           </li>
           <li class="navigation-item">             
             <a class="navigation-link" href="#">
@@ -42,6 +67,27 @@
               </svg> 
               Вход
             </a>
+            <div class="popover popover-cart">
+              <div class="popover-content">
+                <h2 class="popover-title">Личный кабинет</h2>
+                <form class="personal-area-form" action="https://echo.htmlacademy.ru/" method="POST">
+                  <p class="form-field">
+                    <label class="visually-hidden" for="popover-email">Email</label>
+                    <input class="field field-email" placeholder="email@example.com" type="email" name="popover-email" id="popover-email" required>
+                  </p>
+                  <p class="form-field">
+                    <input class="field password-field" id="userPassword" type="password" placeholder="Пароль" required>
+                  </p>
+                  <div class="form-section-but">
+                    <button class="button button-send" type="submit">Отправить</button>
+                    <span>
+                      <a class="popover-form-link" href="">Забыли пароль?</a>
+                      <a class="popover-form-link" href="">Регистрация</a>
+                    </span>
+                  </div>
+                </form>
+              </div>
+            </div>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">
@@ -51,6 +97,11 @@
               </svg>
                 Пусто
             </a>
+            <div class="popover popover-busket">
+              <div class="popover-content">
+                Ваша корзина пока пуста
+              </div>
+            </div>
           </li>
         </ul>
       </nav>
@@ -351,14 +402,14 @@
                       <span class="visually-hidden">Посмотреть дополнительную информацию</span>
                     </button>
                   </span>
-                  <input class="field date-field"  type="text" name="delivery-date" id="delivery-date" value="01.04.2020">
+                  <input class="field date-field"  type="text" name="delivery-date" id="delivery-date" placeholder="01.04.2020">
                 </p>
                 <p class="communication-form-tel">
                   <label class="visually-hidden" for="delivery-tel">
                     <b>Телефон</b>
                   </label>
                   <b class="form-text">Телефон</b>
-                  <input class="field tel-field" value="+7 800 999-00-00" type="tel" name="delivery-tel" id="delivery-tel" required>
+                  <input class="field tel-field" placeholder="+7 800 999-00-00" type="tel" name="delivery-tel" id="delivery-tel" required>
                 </p>
                 <p class="communication-form-address">
                   <span class="form-label form-label-icon">
@@ -452,5 +503,31 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal-container modal-container-close">
+      <div class="modal modal-auth">
+        <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Мы обязательно ответим вам!</h2>
+          <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
+            <p class="field-group">
+              <label class="visually-hidden" for="auth-name">Имя и фамилия</label>
+              <input class="field auth-form-field" type="text" id="auth-name" name="auth-name" placeholder="Имя и фамилия">
+            </p>
+            <p class="field-group">
+              <label class="visually-hidden" for="auth-email">Email</label>
+              <input class="field auth-form-field" value="email@example.com" type="email" name="auth-email" id="auth-email">
+            </p>
+            <p class="field-group">
+              <label class="visually-hidden">В свободной форме</label>
+              <textarea class="field auth-form-field" rows="10" type="text" placeholder="В свободной форме"></textarea>
+            </p>
+          </form>
+          <button class="button button-send button-send-auth" type="submit">Отправить</button>
+        </section>
+      </div>
+    </div>
   </body>
 </html>

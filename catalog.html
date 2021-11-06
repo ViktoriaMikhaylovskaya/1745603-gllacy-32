@@ -33,6 +33,11 @@
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M1.91286 7.24625C1.91286 4.30073 4.30068 1.91292 7.2462 1.91292C10.1917 1.91292 12.5795 4.30073 12.5795 7.24625C12.5795 8.68547 12.0095 9.99154 11.0828 10.951C11.0582 10.9695 11.0346 10.99 11.0123 11.0124C10.9899 11.0347 10.9694 11.0583 10.9509 11.0829C9.99146 12.0095 8.6854 12.5796 7.2462 12.5796C4.30068 12.5796 1.91286 10.1918 1.91286 7.24625ZM11.4653 12.4082C10.3161 13.3487 8.84703 13.9129 7.2462 13.9129C3.5643 13.9129 0.579529 10.9281 0.579529 7.24625C0.579529 3.56435 3.5643 0.579582 7.2462 0.579582C10.9281 0.579582 13.9129 3.56435 13.9129 7.24625C13.9129 8.84711 13.3486 10.3162 12.4081 11.4654L15.2176 14.2749C15.4779 14.5352 15.4779 14.9573 15.2176 15.2177C14.9572 15.478 14.5351 15.478 14.2748 15.2177L11.4653 12.4082Z" fill="#2D3440"/>
               </svg>
             </a>
+            <div class="popover popover-search">
+              <div class="popover-content">
+                <input class="field searc-field" placeholder="Поиск по сайту" type="text" name="search-text" >
+              </div>
+            </div>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">
@@ -41,6 +46,25 @@
               </svg> 
               Вход
             </a>
+            <div class="popover popover-cart">
+              <h2 class="popover-title">Личный кабинет</h2>
+              <form class="personal-area-form" action="https://echo.htmlacademy.ru/" method="POST">
+                <p class="form-field">
+                  <label class="visually-hidden" for="popover-email">Email</label>
+                  <input class="field field-email" placeholder="email@example.com" type="email" name="popover-email" id="popover-email" required>
+                </p>
+                <p class="form-field">
+                  <input class="field password-field" id="userPassword" type="password" placeholder="Пароль" required>
+                </p>
+                <div class="form-section-but">
+                  <button class="button button-send" type="submit">Отправить</button>
+                  <span>
+                    <a class="popover-form-link" href="">Забыли пароль?</a>
+                    <a class="popover-form-link" href="">Регистрация</a>
+                  </span>
+                </div>
+              </form>
+            </div>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">
@@ -50,6 +74,46 @@
               </svg>
               2 товара
             </a>
+            <div class="popover popover-busket-catalog">
+                <h2 class="popover-title">Корзина</h2>
+                <ul class="cart-items-list">
+                  <li class="cart-item">
+                    <img class="product-cart-item" src="img/ice-cream-raspberry.png" width="46" height="46">
+                    <div class="product-info">
+                      <p class="cart-item-title">Малинка</p>
+                      <p class="product--price-info">1 кг х 310 ₽</p>
+                    </div>
+                    <p class="cart-item-price">310 ₽</p>
+                    <button type="button" class="cart-item-button">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8858 2.05482C13.1461 1.79447 13.1461 1.37236 12.8858 1.11201C12.6254 0.851661 12.2033 0.851661 11.943 1.11201L6.99877 6.0562L2.05458 1.11201C1.79423 0.851661 1.37212 0.851661 1.11177 1.11201C0.851417 1.37236 0.851417 1.79447 1.11177 2.05482L6.05596 6.99901L1.11177 11.9432C0.851417 12.2036 0.851417 12.6257 1.11177 12.886C1.37212 13.1464 1.79423 13.1464 2.05458 12.886L6.99877 7.94182L11.943 12.886C12.2033 13.1464 12.6254 13.1464 12.8858 12.886C13.1461 12.6257 13.1461 12.2036 12.8858 11.9432L7.94158 6.99901L12.8858 2.05482Z" fill="#2D3440"/>
+                      </svg>
+                      <span class="visually-hidden">Удалить из корзины</span>
+                    </button>
+                  </li>
+                  <li class="cart-item">
+                    <img class="product-cart-item" src="img/ice-cream-bubble-gum.png" width="46" height="46">
+                    <div class="product-info">
+                      <p class="cart-item-title">Бабл-гам</p>
+                      <p class="product--price-info">1,5 кг х 320 ₽</p>
+                    </div>
+                    <p class="cart-item-price">480 ₽</p>
+                    <button type="button" class="cart-item-button">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8858 2.05482C13.1461 1.79447 13.1461 1.37236 12.8858 1.11201C12.6254 0.851661 12.2033 0.851661 11.943 1.11201L6.99877 6.0562L2.05458 1.11201C1.79423 0.851661 1.37212 0.851661 1.11177 1.11201C0.851417 1.37236 0.851417 1.79447 1.11177 2.05482L6.05596 6.99901L1.11177 11.9432C0.851417 12.2036 0.851417 12.6257 1.11177 12.886C1.37212 13.1464 1.79423 13.1464 2.05458 12.886L6.99877 7.94182L11.943 12.886C12.2033 13.1464 12.6254 13.1464 12.8858 12.886C13.1461 12.6257 13.1461 12.2036 12.8858 11.9432L7.94158 6.99901L12.8858 2.05482Z" fill="#2D3440"/>
+                      </svg>
+                      <span class="visually-hidden">Удалить из корзины</span>
+                    </button>
+                  </li>
+                  <div class="checkout">
+                    <button class="button button-send" type="submit">Оформить заказ</button>
+                    <span class="result">
+                      <p class="result-text">Итого:</p>
+                      <p class="result-text">790 ₽</p>
+                    </span>
+                  </div>
+                </ul>
+            </div>
           </li>
         </ul>
       </nav>
@@ -76,7 +140,7 @@
           <section class="catalog-products">
             <h2 class="visually-hidden">Список товаров с фильтрами</h2>
             <form class="sorting-type">
-              <label class="sorting-filter" for="sorting">Сортировка
+              <label class="sorting-filter catalog-filter-group" for="sorting">Сортировка
                 <select class="select-control" id="sorting" name="sorting">
                   <option value="popular">по популярности</option>
                   <option value="cheap">Сначала дешёвое</option>
@@ -84,20 +148,30 @@
                 </select>
               </label>
 
-              <fieldset class="catalog-filter-group">
-                <legend class="catalog-filter-title">Цена</legend>
-                <label class="catalog-filter-label">
-                    от <input class="catalog-filter-input" type="number" name="min-price"> ₽
-                </label>
-                <label class="catalog-filter-label">
-                    до <input class="catalog-filter-input" type="number" name="max-price"> ₽
-                </label>
-                <button class="range-toggle toggle-min" type="button">
-                  <span class="visually-hidden">Изменить минимальную цену.</span>
-                </button>
-                <button class="range-toggle toggle-max" type="button">
-                  <span class="visually-hidden">Изменить максимальную цену.</span>
-                </button>
+              <fieldset class="catalog-filter-group group-range">
+                <div class="range">
+                  <legend class="catalog-filter-title">Цена:</legend>
+                  <div class="range-wrapper-inputs">
+                    <label class="catalog-filter-label">
+                      <input class="range-input" type="number" value="100" name="min-price"> ₽
+                    </label>
+                    <label class="catalog-filter-label">
+                      - <input class="range-input" type="number" value="500" name="max-price" style="width: 37px"> ₽
+                    </label>
+                  </div>
+                </div>
+                <div class="rangejb">
+                  <div class="range-scale">
+                    <div class="range-bar" style="left: 40px; width: 56px">
+                      <button class="range-toggle toggle-min" type="button">
+                        <span class="visually-hidden">Изменить минимальную цену.</span>
+                      </button>
+                      <button class="range-toggle toggle-max" type="button">
+                        <span class="visually-hidden">Изменить максимальную цену.</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </fieldset>
           
               <fieldset class="catalog-filter-group">
@@ -105,28 +179,28 @@
                 <ul class="catalog-filter-list">
                   <li class="catalog-filter-item">
                     <label class="control">
-                      <input class="visually-hidden control-input" type="radio" name="fatness" value="fat-free">
+                      <input class="visually-hidden input-radio" type="radio" name="fatness" value="fat-free">
                       <span class="control-mark"></span>
                       <span class="control-label">0%</span>
                     </label>
                   </li>
                   <li class="catalog-filter-item">
                     <label class="control">
-                      <input class="visually-hidden control-input" type="radio" name="fatness" value="min-fatness" checked>
+                      <input class="visually-hidden input-radio" type="radio" name="fatness" value="min-fatness" checked>
                       <span class="control-mark"></span>
                       <span class="control-label">до 10%</span>
                     </label>
                   </li>
                   <li class="catalog-filter-item">
                     <label class="control">
-                      <input class="visually-hidden control-input" type="radio" name="fatness" value="middle-fatness">
+                      <input class="visually-hidden input-radio" type="radio" name="fatness" value="middle-fatness">
                       <span class="control-mark"></span>
                       <span class="control-label">до 30%</span>
                     </label>
                   </li>
                   <li class="catalog-filter-item">
                     <label class="control">
-                      <input class="visually-hidden control-input" type="radio" name="fatness" value="max-fatness">
+                      <input class="visually-hidden input-radio" type="radio" name="fatness" value="max-fatness">
                       <span class="control-mark"></span>
                       <span class="control-label">выше 30%</span>
                     </label>
