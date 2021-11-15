@@ -545,7 +545,8 @@ body {
     stroke: black;
 }
 
-.button-slide:focus {
+.button-slide:focus,
+.button-slide:active {
     border: 2px solid #2D3440;
     stroke: black;
     background: rgba(252, 252, 252, 0.3);
@@ -610,7 +611,8 @@ body {
     border-radius: 50%;
 }
 
-.button-social:focus .button-social-svg{
+.button-social:focus .button-social-svg,
+.button-social:active .button-social-svg{
     background: #2D3440;
     border: 2px solid #2D3440;
     border-radius: 50%;
@@ -755,7 +757,8 @@ h4 {
     fill: black;
 }
 
-.button-variation:focus {
+.button-variation:focus,
+.button-variation:active {
     border: 2px solid #2D3440;
     background: #FF2F64;
 }
@@ -1024,7 +1027,8 @@ h4 {
   border-color: #2D3440;
 }
 
-.field:focus {
+.field:focus,
+.field:active {
     border: 1px solid #2D3440;
     border-radius: 4px;
     color: #2D3440;
@@ -1416,7 +1420,8 @@ h3 {
     background-color: rgb(99%, 99%, 99%, 0.5);
 }
 
-.select-control:focus {
+.select-control:focus,
+.select-control:active {
     background-color: rgb(99%, 99%, 99%, 0.4);
     outline: 3px solid #FCFCFC;
 }
@@ -1457,6 +1462,7 @@ h3 {
 .filter-title {
     margin: 0;
     padding-left: 16px;
+    font-weight: normal;
 }
 
 .group-range {
@@ -1665,7 +1671,8 @@ h3 {
     border: 2px solid rgb(100%, 69%, 76%, 0.3);
 }
 
-.button-filters:focus {
+.button-filters:focus,
+.button-filters:active {
     border: 2px solid #2D3440;
 }
 
@@ -1834,7 +1841,8 @@ h3 {
     border: 1px solid #FCFCFC;
 }
 
-.pagination-link:focus {
+.pagination-link:focus,
+.pagination-link:active {
     background: rgba(252, 252, 252, 0.3);
     border: 1px solid #2D3440;
 }
