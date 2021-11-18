@@ -140,7 +140,7 @@
         <div class="catalog-main-sections">
           <section class="catalog-products">
             <h2 class="visually-hidden">Список товаров с фильтрами</h2>
-            <form class="sorting-type">
+            <form class="sorting-type" action="https://echo.htmlacademy.ru/" method="POST">
               <label class="sorting-filter catalog-filter-group" for="sorting">
                 <span class="filter-title">Сортировка</span>
                 <select class="select-control" id="sorting" name="sorting">
@@ -180,28 +180,28 @@
                 <legend class="catalog-filter-title">Жирность:</legend>
                 <ul class="catalog-filter-list">
                   <li class="catalog-filter-item">
-                    <label class="control">
+                    <label class="control" tabindex="0">
                       <input class="visually-hidden input-radio" type="radio" name="fatness" value="fat-free">
                       <span class="control-mark-radio"></span>
                       <span class="control-label">0%</span>
                     </label>
                   </li>
                   <li class="catalog-filter-item">
-                    <label class="control">
+                    <label class="control" tabindex="0">
                       <input class="visually-hidden input-radio" type="radio" name="fatness" value="min-fatness" checked>
                       <span class="control-mark-radio"></span>
                       <span class="control-label">до 10%</span>
                     </label>
                   </li>
                   <li class="catalog-filter-item">
-                    <label class="control">
+                    <label class="control" tabindex="0">
                       <input class="visually-hidden input-radio" type="radio" name="fatness" value="middle-fatness">
                       <span class="control-mark-radio"></span>
                       <span class="control-label">до 30%</span>
                     </label>
                   </li>
                   <li class="catalog-filter-item">
-                    <label class="control">
+                    <label class="control" tabindex="0">
                       <input class="visually-hidden input-radio" type="radio" name="fatness" value="max-fatness">
                       <span class="control-mark-radio"></span>
                       <span class="control-label">выше 30%</span>
@@ -261,7 +261,7 @@
             <ul class="product-card-list">
               <li class="variation-item">
                 <img class="variation-img" src="img/ice-cream-raspberry.png" width="174" height="166" alt="Мороженое с малиной">
-                <h4>Малинка</h4>
+                <h4 class="product-name">Малинка</h4>
                 <p class="variation-card-text text">Сливочное мороженое с малиновым джемом</p>
                 <div class="price-ice-cream">
                   <b class="ice-price">310 ₽/кг</b>
@@ -275,7 +275,7 @@
               </li>
               <li class="variation-item">
                 <img class="variation-img" src="img/ice-cream-pistachio.png" width="174" height="166" alt="Мороженое с фисташкой">
-                <h4>Фисташка</h4>
+                <h4 class="product-name">Фисташка</h4>
                 <p class="variation-card-text text">Фисташковый пломбир с кусочками шоколада</p>
                 <div class="price-ice-cream">
                   <b class="ice-price">340 ₽/кг</b>
@@ -289,7 +289,7 @@
               </li>
               <li class="variation-item">
                 <img class="variation-img" src="img/ice-cream-blueberry.png" width="174" height="166" alt="Мороженое с черникой">
-                <h4>Черника</h4>
+                <h4 class="product-name">Черника</h4>
                 <p class="variation-card-text text">Крем-брюле <br> с черничным джемом</p>
                 <div class="price-ice-cream">
                   <b class="ice-price">330 ₽/кг</b>
@@ -303,7 +303,7 @@
               </li>
               <li class="variation-item">
                 <img class="variation-img" src="img/ice-cream-bubble-gum.png" width="174" height="166" alt="Мороженое Бабл-гам">
-                <h4>Бабл-гам</h4>
+                <h4 class="product-name">Бабл-гам</h4>
                 <p class="variation-card-text text">Ванильный пломбир <br> со сладкой посыпкой</p>
                 <div class="price-ice-cream">
                   <b class="ice-price">320 ₽/кг</b>
@@ -317,7 +317,7 @@
               </li>
               <li class="variation-item">
                 <img class="variation-img" src="img/ice-cream-blackberry.png" width="174" height="166" alt="Мороженое с ежевикой">
-                <h4>Ежевика</h4>
+                <h4 class="product-name">Ежевика</h4>
                 <p class="variation-card-text text">Сливочное мороженое с ежевичным джемом</p>
                 <div class="price-ice-cream">
                   <b class="ice-price">330 ₽/кг</b>
@@ -331,7 +331,7 @@
               </li>
               <li class="variation-item">
                 <img class="variation-img" src="img/ice-cream-banana.png" width="174" height="166" alt="Мороженое с бананом">
-                <h4>Банан</h4>
+                <h4 class="product-name">Банан</h4>
                 <p class="variation-card-text text">Сливочный пломбир <br> с банановым вкусом</p>
                 <div class="price-ice-cream">
                   <b class="ice-price">340 ₽/кг</b>
@@ -345,7 +345,7 @@
               </li>
               <li class="variation-item">
                 <img class="variation-img" src="img/ice-cream-chocolate.png" width="174" height="166" alt="Мороженое с шоколадом">
-                <h4>Шоколадка</h4>
+                <h4 class="product-name">Шоколадка</h4>
                 <p class="variation-card-text text">Классический шоколадный пломбир</p>
                 <div class="price-ice-cream">
                   <b class="ice-price">270 ₽/кг</b>
@@ -359,7 +359,7 @@
               </li>
               <li class="variation-item">
                 <img class="variation-img" src="img/ice-cream-strawberry.png" width="174" height="166" alt="Мороженое с клубникой">
-                <h4>Клубничка</h4>
+                <h4 class="product-name">Клубничка</h4>
                 <p class="variation-card-text text">Сливочный пломбир <br> с клубничным вкусом</p>
                 <div class="price-ice-cream">
                   <b class="ice-price">300 ₽/кг</b>
@@ -373,7 +373,7 @@
               </li>
               <li class="variation-item">
                 <img class="variation-img" src="img/ice-cream-lemon.png" width="174" height="166" alt="Мороженое с лимоном">
-                <h4>Лимон</h4>
+                <h4 class="product-name">Лимон</h4>
                 <p class="variation-card-text text">Освежающий лимонный сорбет</p>
                 <div class="price-ice-cream">
                   <b class="ice-price">310 ₽/кг</b>
@@ -387,7 +387,7 @@
               </li>
               <li class="variation-item">
                 <img class="variation-img" src="img/ice-cream-menthol.png" width="174" height="166" alt="Мороженое с ментолом">
-                <h4>Ментол</h4>
+                <h4 class="product-name">Ментол</h4>
                 <p class="variation-card-text text">Сливочный пломбир <br> с ментоловым сиропом</p>
                 <div class="price-ice-cream">
                   <b class="ice-price">320 ₽/кг</b>
@@ -401,7 +401,7 @@
               </li>
               <li class="variation-item">
                 <img class="variation-img" src="img/ice-cream-nuts.png" width="174" height="166" alt="Мороженое с орешками">
-                <h4>Орешек</h4>
+                <h4 class="product-name">Орешек</h4>
                 <p class="variation-card-text text">Фисташковый пломбир с шоколадным сиропом</p>
                 <div class="price-ice-cream">
                   <b class="ice-price">360 ₽/кг</b>
@@ -415,7 +415,7 @@
               </li>
               <li class="variation-item">
                 <img class="variation-img" src="img/ice-cream-creme-brulee.png" width="174" height="166" alt="Мороженое крем-брюле">
-                <h4>Крем-брюле</h4>
+                <h4 class="product-name">Крем-брюле</h4>
                 <p class="variation-card-text text">Классическое <br> крем-брюле </p>
                 <div class="price-ice-cream">
                   <b class="ice-price">280 ₽/кг</b>

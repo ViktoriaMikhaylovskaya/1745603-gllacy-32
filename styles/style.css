@@ -25,7 +25,7 @@
 
 /* global */
 
- html {
+html {
     height: 100%;
 }
 
@@ -65,7 +65,7 @@ body {
     background-color: #FCFCFC;
     text-decoration: none;
     border-radius: 26px;
-    padding: 12px 30px;
+    padding: 12px 32px;
     border: 4px solid rgba(255, 47, 100, 0.3);
     box-shadow: 0px 4px 12px rgba(45, 52, 64, 0.1);
 }
@@ -398,7 +398,7 @@ body {
 /* promo */
 
 .main-promo{
-    margin-bottom: 75px;
+    margin-bottom: 73px;
 }
 
 .promo {
@@ -504,7 +504,7 @@ body {
     height: 13px;
     border: 1px solid transparent;
     border-radius: 50%;
-    background-color: white;
+    background-color:#FCFCFC;
     opacity: 0.3;
     transform: scale(0.8);
 }
@@ -652,7 +652,7 @@ body {
 
 .offers-text .text {
     color: #2D3440;
-    margin-bottom: 30px;
+    margin-bottom: 29px;
 }
 
 .offers-tittle {
@@ -689,13 +689,13 @@ body {
     padding: 0;
     list-style: none;
     padding-right: 0;
-    margin-top: 108px;
+    margin-top: 107px;
 }
 
-h4 {
-    padding: 3px 0;
-    padding-bottom: 9px;
+.product-name {
     margin: 0;
+    padding: 4px 0;
+    padding-bottom: 9px;
 }
 
 .variation-item {
@@ -708,13 +708,13 @@ h4 {
     color: #2D3440;
     width: 270px;
     justify-content: space-between;
-    padding: 24px 40px;
+    padding: 23px 40px;
     padding-top: 0;
     box-sizing: border-box;
 }
 
 .variation-img {
-    margin-top: -41px;
+    margin-top: -42px;
     transform: scale(1.1);
 }
 
@@ -788,11 +788,11 @@ h4 {
     border-radius: 16px;
     width: 1122px;
     padding: 57px 0;
-    padding-bottom: 16px;
+    padding-bottom: 15px;
 }
 
 .title-advantages {
-    margin-bottom: 57px;
+    margin-bottom: 56px;
 }
 
 .advantages-list {
@@ -806,17 +806,41 @@ h4 {
 
 .advantages-item {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
+    position: relative;
 }
 
 .advantages-text {
     width: 442px;
+    padding-left: 16px;
     margin: 0;
-    margin-bottom: 41px;
+    margin-bottom: 40px;
 }
 
-.advantages-img {
-    margin-right: 16px;
+.advantages-text::before {
+    position: absolute;
+    content: "";
+    width: 48px;
+    height: 48px;
+    top: -1;
+    left: 0;
+}
+
+.advantages-ice-cream::before {
+    content: url("../img/advantages-ice.svg");
+}
+
+.advantages-cow::before {
+    content: url("../img/advantages-cow.svg");
+}
+
+.advantages-leaf::before {
+    content: url("../img/advantages-leaf.svg");
+}
+
+.advantages-temp::before {
+    content: url("../img/advantages-temperature.svg");
 }
 
 
@@ -868,7 +892,8 @@ h4 {
     background: #FCFCFC;
     border-radius: 16px;
     padding: 26px;
-    padding-bottom: 24px;
+    padding-top: 27px;
+    padding-bottom: 23px;
     height: 100%;
     box-sizing: border-box;
 }
@@ -887,7 +912,7 @@ h4 {
     justify-content: space-between;
 }
 .field-email {
-    width: 100%;
+    width: 332px;
     padding: 14px 16px;
     font-size: 16px;
     line-height: 20px;
@@ -966,7 +991,7 @@ h4 {
     display: grid;
     grid-template-columns: 117px 287px;
     gap: 16px;
-    row-gap: 19px;
+    row-gap: 17px;
     margin-top: 17px;
 }
 
@@ -1092,7 +1117,7 @@ h4 {
 }
 
 .delivery-form .button-send {
-    margin-top: 8px;
+    margin-top: 10px;
 }
 
 
@@ -1115,6 +1140,7 @@ h4 {
     background: #FCFCFC;
     border-radius: 8px;
     box-sizing: border-box;
+    box-shadow: 0px 8px 16px rgba(45, 52, 64, 0.12);
 }
 
 .location-text {
@@ -1134,13 +1160,9 @@ h4 {
     margin: 12px 0 24px 0;
 }
 
-h3 {
-    margin: 0;
-}
-
 .location-number {
     margin: 0;
-    margin-top: 14px;
+    margin-top: 13px;
 }
 
 .main-location .text {
@@ -1254,7 +1276,7 @@ h3 {
     display: flex;
     width: 100%;
     height: 100%;
-    background-color: rgba(45, 52, 64, 0.4);;
+    background-color: rgba(45, 52, 64, 0.4);
 }
 
 .modal-container-close {
@@ -1549,7 +1571,7 @@ h3 {
     border-radius: 50%;
     width: 5px;
     height: 5px;
-    background-color: white;
+    background-color: #FCFCFC;
 }
 
 .range-toggle:hover::before,
@@ -1586,8 +1608,9 @@ h3 {
     padding-left: 24px;
 }
 
-.control:hover .control-mark-radio {
-    border-color: white;
+.control:hover .control-mark-radio,
+.control:focus .control-mark-radio  {
+    border-color: #FCFCFC;
 }
 
 .control:disabled .control-mark-radio {
@@ -1605,7 +1628,7 @@ h3 {
 }
 
 .input-radio + .control-mark-radio:hover {
-    border: 2px solid white;
+    border: 2px solid #FCFCFC;
 }
 
 .input-radio:checked + .control-mark-radio::before {
@@ -1620,8 +1643,8 @@ h3 {
 }
 
 .input-radio:checked:hover + .control-mark-radio::before {
-    background-color: white;
-    border-color: white;
+    background-color: #FCFCFC;
+    border-color: #FCFCFC;
 }
 
 .input-radio:checked:disabled + .control-mark-radio::before {
@@ -1647,8 +1670,22 @@ h3 {
     content: url("../img/check-off.svg");
 }
 
+.control-input:hover + .control-mark::before,
+.control-input:focus + .control-mark::before {
+    content: url("../img/check-off-white.svg");
+}
+
 .control-input:checked + .control-mark::before {
     content: url("../img/check-on.svg");
+}
+
+.control-input:checked:hover + .control-mark::before,
+.control-input:checked:focus + .control-mark::before {
+    content: url("../img/check-on-white.svg");
+}
+
+.control-input:disabled + .control-mark::before {
+    opacity: 0.5;
 }
 
 .fruit {
@@ -1669,7 +1706,7 @@ h3 {
 }
 
 .button-filters:hover {
-    background: #FCFCFC;
+    background-color: #FCFCFC;
     border: 2px solid rgb(100%, 69%, 76%, 0.3);
 }
 
@@ -1679,7 +1716,7 @@ h3 {
 }
 
 .button-filters:disabled {
-    background: rgba(252, 252, 252, 0.3);
+    background-color: rgba(252, 252, 252, 0.3);
     opacity: 0.4;
     border: 2px solid #FCFCFC;
 }
